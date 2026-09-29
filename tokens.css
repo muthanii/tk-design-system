@@ -1,0 +1,59 @@
+/* Teebat Karbala design tokens. Generated from tokens.json. */
+:root {
+  /* color */
+  --primary: #1a76d1;
+  --navy: #0a4784;
+  --ink: #2c2d3f;
+  --text-dark: #333333;
+  --text: #707070;
+  --text-menu: #666666;
+  --surface: #ffffff;
+  --surface-alt: #f8f8f8;
+  --surface-card: #f8f9fa;
+  --line: #eeeeee;
+  --line-strong: #dddddd;
+  --field-border: #8c8c8c;
+  --primary-overlay: rgba(26, 118, 209, 0.8);
+  --logo-blue: #105989;
+  --logo-aqua: #78c8d9;
+  --sand: #c09a60;
+  --danger: #dc3545;
+  /* spacing */
+  --space-10: 10px;
+  --space-15: 15px;
+  --space-20: 20px;
+  --space-24: 24px;
+  --space-25: 25px;
+  --space-30: 30px;
+  --space-100: 100px;
+  --space-120: 120px;
+  /* radius */
+  --radius-3: 3px;
+  --radius-4: 4px;
+  --radius-5: 5px;
+  --radius-8: 8px;
+  --radius-round: 50%;
+  /* shadow */
+  --shadow-dropdown: 0px 3px 5px #3333334d;
+  --shadow-card: 0px 0px 10px #0000001a;
+  --shadow-raised: 0px 10px 10px #0000001c;
+  /* type */
+  --font-sans: Cairo, "Cairo-Regular", sans-serif;
+}
+.hero { font-family: var(--font-sans); font-size: 38px; line-height: 42px; font-weight: 400; }
+.hero-subtitle { font-family: var(--font-sans); font-size: 20px; line-height: 24px; font-weight: 500; }
+.section-title { font-family: var(--font-sans); font-size: 32px; line-height: 38.4px; font-weight: 600; }
+.stat { font-family: var(--font-sans); font-size: 30px; line-height: 24px; font-weight: 600; }
+.feature-title { font-family: var(--font-sans); font-size: 21px; line-height: 25.2px; font-weight: 600; }
+.card-title { font-family: var(--font-sans); font-size: 20px; line-height: 24px; font-weight: 600; }
+.news-title { font-family: var(--font-sans); font-size: 24px; line-height: 28.8px; font-weight: 500; }
+.lead { font-family: var(--font-sans); font-size: 19px; line-height: 24px; font-weight: 400; }
+.body { font-family: var(--font-sans); font-size: 18px; line-height: 24px; font-weight: 400; }
+.nav { font-family: var(--font-sans); font-size: 18px; line-height: 24px; font-weight: 500; }
+.small { font-family: var(--font-sans); font-size: 15px; line-height: 24px; font-weight: 400; }
+.button { font-family: var(--font-sans); font-size: 14px; line-height: 21px; font-weight: 500; }
+.topbar { font-family: var(--font-sans); font-size: 14px; line-height: 24px; font-weight: 400; }
+.ar-hero { font-family: var(--font-sans); font-size: 38px; line-height: 57px; font-weight: 400; }
+.ar-section-title { font-family: var(--font-sans); font-size: 32px; line-height: 48px; font-weight: 600; }
+.ar-card-title { font-family: var(--font-sans); font-size: 20px; line-height: 30px; font-weight: 600; }
+.ar-body { font-family: var(--font-sans); font-size: 18px; line-height: 30px; font-weight: 400; }

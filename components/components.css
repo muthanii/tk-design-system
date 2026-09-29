@@ -1,0 +1,142 @@
+/* Teebat Karbala — component styles matching teebatkarbala.iq (Mediplus-based style.css). Needs tokens.css. */
+.tk { font-family: var(--font-sans); font-size: 18px; line-height: 24px; color: var(--text); }
+.tk *, .tk *::before, .tk *::after { box-sizing: border-box; }
+.tk h1, .tk h2, .tk h3, .tk h4, .tk p { margin: 0; }
+
+/* Icons: IcoFont glyphs inlined as SVG (fill: currentColor) */
+.tk-ico { display: inline-block; flex: none; vertical-align: -0.125em; }
+
+/* Button (.btn) */
+.tk-btn { display: inline-block; font: 500 14px/21px var(--font-sans); text-transform: capitalize; padding: 13px var(--space-25);
+  border: 0; border-radius: var(--radius-4); background: var(--primary); color: #fff; text-decoration: none; cursor: pointer; transition: background .4s ease; }
+.tk-btn:hover { background: var(--ink); }
+.tk-btn--dark { background: var(--ink); }
+.tk-btn--dark:hover { background: var(--primary); }
+.tk-btn--small { font-size: 13px; padding: 4px 12px; }
+.tk-btn:focus-visible { outline: 3px solid var(--ink); outline-offset: 2px; }
+
+/* Header: top bar + main nav */
+.tk-topbar { background: var(--surface); border-bottom: 1px solid var(--line); padding: var(--space-15) var(--space-20); display: flex; justify-content: space-between; align-items: center; gap: var(--space-20); }
+.tk-topbar a, .tk-topbar span { color: var(--ink); font-size: 14px; text-decoration: none; margin-right: var(--space-15); }
+.tk-nav { background: var(--surface); display: flex; align-items: center; justify-content: space-between; padding: 0 var(--space-20); }
+.tk-nav ul { list-style: none; margin: 0; padding: 0; display: flex; gap: var(--space-15); }
+.tk-nav ul a { position: relative; display: inline-block; padding: var(--space-25) 12px; color: var(--ink); font: 500 18px/24px var(--font-sans); text-transform: capitalize; text-decoration: none; transition: color .4s ease; }
+.tk-nav ul a::before { content: ""; position: absolute; left: 0; bottom: 0; height: 3px; width: 0; background: var(--primary); border-radius: 5px 5px 0 0; opacity: 0; transition: all .4s ease; }
+.tk-nav ul a:hover, .tk-nav ul a[aria-current] { color: var(--primary); }
+.tk-nav ul a:hover::before, .tk-nav ul a[aria-current]::before { width: 100%; opacity: 1; }
+
+/* Section title (.section-title) */
+.tk-section-title { text-align: center; max-width: 600px; margin: 0 auto; }
+.tk-section-title h2 { font: 600 32px/38.4px var(--font-sans); color: var(--ink); text-transform: capitalize; margin-bottom: var(--space-20); }
+.tk-section-title p { font-size: 19px; line-height: 24px; color: var(--text); }
+
+/* Info card (.single-schedule) */
+.tk-info-card { position: relative; border-radius: var(--radius-5); background: var(--navy); color: #fff; padding: var(--space-30); transition: transform .3s ease-out; overflow: hidden; }
+.tk-info-card:hover { transform: translateY(-5px); box-shadow: 0 10px 20px -6px var(--primary); }
+.tk-info-card h4 { font: 600 20px/24px var(--font-sans); text-transform: capitalize; margin: 13px 0 var(--space-10); }
+.tk-info-card p { color: #fff; }
+
+/* Feature (.single-features) */
+.tk-feature { text-align: center; padding: var(--space-10) var(--space-20); position: relative; }
+.tk-feature__icon { width: 100px; height: 100px; margin: 0 auto var(--space-25); border: 1px solid var(--line-strong); border-radius: var(--radius-round); display: grid; place-items: center; color: var(--primary); transition: all .4s ease; }
+.tk-feature:hover .tk-feature__icon { background: var(--primary); color: #fff; border-color: transparent; }
+.tk-feature h3 { font: 600 21px/25.2px var(--font-sans); color: var(--ink); }
+.tk-feature p { margin-top: var(--space-20); color: var(--text); }
+.tk-features { display: flex; }
+.tk-features .tk-feature { flex: 1; }
+.tk-features .tk-feature:not(:last-child)::before { content: ""; position: absolute; top: 60px; right: -30%; width: 60%; border-bottom: 3px dotted var(--primary); }
+
+/* Stats band (.fun-facts) */
+.tk-stats { position: relative; background: var(--primary-overlay); padding: 60px var(--space-30); display: flex; gap: var(--space-30); justify-content: space-around; }
+.tk-stat { display: flex; align-items: center; gap: var(--space-10); color: #fff; }
+.tk-stat__icon { width: 70px; height: 70px; border: 2px solid #fff; border-radius: var(--radius-round); display: grid; place-items: center; transition: all .4s ease; flex: none; }
+.tk-stat:hover .tk-stat__icon { background: #fff; color: var(--primary); border-color: transparent; }
+.tk-stat__num { display: block; font: 600 30px/24px var(--font-sans); margin-bottom: 7px; }
+.tk-stat p { color: #fff; font-size: 15px; }
+
+/* Footer (.footer-top + .copyright) */
+.tk-footer { background: var(--primary); color: #fff; position: relative; }
+.tk-footer__top { padding: 60px var(--space-30); display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-30); background: rgba(0, 0, 0, 0.1); }
+.tk-footer h2 { font: 600 20px/24px var(--font-sans); text-transform: capitalize; padding-bottom: var(--space-20); }
+.tk-footer p, .tk-footer a { color: #fff; }
+.tk-footer ul { list-style: none; margin: 0; padding: 0; }
+.tk-footer li { margin-bottom: 12px; }
+.tk-footer a { text-decoration: none; text-transform: capitalize; }
+.tk-footer__copy { text-align: center; padding: var(--space-25) 0; }
+.tk-social { display: flex; gap: var(--space-10); margin-top: var(--space-25); }
+.tk-social a { width: 34px; height: 34px; border: 1px solid #fff; border-radius: var(--radius-round); display: grid; place-items: center; font-size: 13px; }
+.tk-social a:hover { background: #fff; color: var(--primary); border-color: transparent; }
+
+/* ---------- Hero (.slider .single-slider) ---------- */
+.tk-hero { position: relative; height: 600px; background: var(--surface-alt) center / cover no-repeat; display: flex; align-items: center; padding: 0 var(--space-30); }
+.tk-hero__text { max-width: 58%; }
+.tk-hero h1 { font: 400 38px/42px var(--font-sans); color: var(--ink); }
+.tk-hero h1 span { color: var(--primary); }
+.tk-hero h5 { margin: 0; font: 500 20px/24px var(--font-sans); color: var(--ink); }
+.tk-hero .tk-btn { margin-top: var(--space-30); }
+@media (max-width: 767px) {
+  .tk-hero { height: 380px; padding: 0 var(--space-15); }
+  .tk-hero__text { max-width: 100%; width: 100%; }
+  .tk-hero h1 { font-size: 13px; line-height: 24px; }
+  .tk-hero .tk-btn { display: block; width: 100%; text-align: center; font-size: 13px; line-height: 19.5px; padding: 11px var(--space-25); }
+}
+.tk-hero--phone { height: 380px; padding: 0 var(--space-15); }
+.tk-hero--phone .tk-hero__text { max-width: 100%; width: 100%; }
+.tk-hero--phone h1 { font-size: 13px; line-height: 24px; }
+.tk-hero--phone .tk-btn { display: block; width: 100%; text-align: center; font-size: 13px; line-height: 19.5px; padding: 11px var(--space-25); }
+
+/* ---------- Dropdown (.header .nav li .dropdown) ---------- */
+.tk-dropdown { list-style: none; margin: 0; padding: 0; width: 220px; background: var(--surface); box-shadow: var(--shadow-dropdown); }
+.tk-dropdown li { border-bottom: 1px dashed var(--line); }
+.tk-dropdown li:last-child { border-bottom: 0; }
+.tk-dropdown a { display: block; padding: 12px var(--space-15); color: var(--text-menu); font: 400 18px/24px var(--font-sans); text-decoration: none; transition: color .3s ease; }
+.tk-dropdown a:hover, .tk-dropdown a:focus-visible { color: var(--primary); }
+
+/* ---------- Partner strip (.clients) ---------- */
+.tk-partners { padding: var(--space-100) var(--space-30); background: var(--surface); display: flex; align-items: center; justify-content: center; gap: var(--space-30); flex-wrap: wrap; }
+.tk-partners img, .tk-partners .tk-partner { height: 102px; width: auto; max-width: 155px; object-fit: contain; }
+
+/* ---------- Form field (.form-group input) ---------- */
+.tk-field { display: flex; flex-direction: column; gap: var(--space-10); }
+.tk-field label { font: 500 14px/24px var(--font-sans); color: var(--ink); }
+.tk-input, .tk-textarea { width: 100%; height: 50px; padding: 0 18px; border: 1px solid var(--field-border); border-radius: var(--radius-4); background: var(--surface); font: 400 16px/24px var(--font-sans); color: var(--text-dark); transition: border-color .3s ease, box-shadow .3s ease; }
+.tk-textarea { height: 160px; padding: 14px 18px; resize: vertical; }
+.tk-input::placeholder, .tk-textarea::placeholder { color: var(--text); }
+.tk-input:focus, .tk-textarea:focus { outline: none; border-color: var(--primary); box-shadow: 0 0 0 3px rgba(26, 118, 209, 0.25); }
+.tk-input[aria-invalid="true"], .tk-textarea[aria-invalid="true"] { border-color: var(--danger); }
+.tk-field__error { font-size: 14px; line-height: 20px; color: var(--danger); }
+.tk-input:disabled { background: var(--surface-alt); color: var(--text); cursor: not-allowed; }
+
+/* ---------- News card (news.html .blog-item) ---------- */
+.tk-news-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-30); }
+.tk-news { background: var(--surface-card); border-radius: var(--radius-4); overflow: hidden; }
+.tk-news__img { aspect-ratio: 290 / 166; background: var(--line) center / cover no-repeat; }
+.tk-news__tag { display: inline-block; max-width: calc(100% - 2 * var(--space-24)); margin: var(--space-24) 0 0 var(--space-24); padding: 8px var(--space-24); background: var(--primary); color: #fff; font: 400 18px/24px var(--font-sans); text-decoration: none; }
+.tk-news__body { padding: var(--space-24); }
+.tk-news__meta { display: flex; align-items: center; gap: 8px; margin-bottom: 16px; font-size: 14.4px; line-height: 24px; color: var(--text); }
+.tk-news__meta svg { color: var(--primary); }
+.tk-news h4 { margin: 0 0 16px; font: 500 24px/28.8px var(--font-sans); color: var(--ink); }
+.tk-news p { font-size: 18px; line-height: 24px; color: var(--text); }
+.tk-news__more { display: inline-flex; align-items: center; gap: 6px; margin-top: var(--space-10); font: 400 18px/24px var(--font-sans); color: var(--text); text-transform: uppercase; text-decoration: none; }
+.tk-news__more:hover { color: var(--primary); }
+[dir="rtl"] .tk-news__tag { margin: var(--space-24) var(--space-24) 0 0; }
+[dir="rtl"] .tk-news__more svg { transform: scaleX(-1); }
+
+/* ---------- Mobile menu (SlickNav, below 768px) ---------- */
+.tk-mobile-top { text-align: center; padding: var(--space-15); border-bottom: 1px solid var(--line); }
+.tk-mobile-top a, .tk-mobile-top span { display: inline-block; margin: 0 8px; color: var(--ink); font-size: 14px; line-height: 24px; text-decoration: none; }
+.tk-mobile-logo { display: block; width: 100%; max-width: 310px; height: auto; margin: var(--space-15) auto; }
+.tk-burger { display: block; margin: 0 5px 6px auto; width: 25px; padding: 0; border: 0; background: transparent; cursor: pointer; }
+.tk-burger span { display: block; width: 25px; height: 3px; margin: 0 0 4px; background: var(--primary); border-radius: 1px; }
+.tk-mobilemenu { list-style: none; margin: 0; padding: 0 0 var(--space-15); background: var(--surface); }
+.tk-mobilemenu a:not(.tk-btn) { display: block; padding: 4px 10px; color: var(--ink); font: 400 14px/24px var(--font-sans); text-decoration: none; }
+.tk-mobilemenu__arrow { font-size: 11.2px; margin-inline-start: 4.5px; }
+.tk-mobilemenu .tk-mobilemenu__sub a { padding-inline-start: 26px; color: var(--text-menu); }
+.tk-mobilemenu .tk-btn--small { display: inline-block; margin: 6px 10px 0; }
+
+/* ---------- Arabic / right-to-left ---------- */
+[dir="rtl"] .tk, .tk [dir="rtl"], .tk[dir="rtl"] { font-family: var(--font-sans); }
+[dir="rtl"] .tk-nav ul a, [dir="rtl"] .tk-footer a, [dir="rtl"] .tk-section-title h2, [dir="rtl"] .tk-info-card h4, [dir="rtl"] .tk-btn { text-transform: none; }
+[dir="rtl"] .tk-features .tk-feature:not(:last-child)::before { right: auto; left: -30%; }
+[dir="rtl"] .tk-nav ul a::before { left: auto; right: 0; }
+[dir="rtl"] .tk-hero h1, [dir="rtl"] .tk-hero h5 { line-height: 1.5; }

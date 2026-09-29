@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="../tokens.css">
+<link rel="stylesheet" href="components.css">
+<meta charset="utf-8">
+<title>Teebat Karbala</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap">
+<style>
+  html, body { margin:0; height:100%; }
+  body { background:var(--surface); color:var(--ink); font-family:var(--font-sans); overflow:hidden; }
+  .cover { position:relative; height:320px; overflow:hidden; }
+  .art { position:absolute; top:0; left:480px; width:480px; height:320px; overflow:hidden; }
+  .art svg { display:block; width:480px; height:320px; }
+  .primary { fill:var(--primary); }
+  .navy { fill:var(--navy); }
+  .ink { fill:var(--ink); }
+  .blk { rx:var(--radius-5); }
+  .ring { fill:none; stroke:var(--surface); stroke-width:2; }
+  .dots { stroke:var(--surface); stroke-width:3; stroke-dasharray:3 6; stroke-linecap:round; }
+  .words { position:absolute; left:var(--space-30); bottom:var(--space-30); max-width:440px; }
+  .name { margin:0; font-size:100px; line-height:.95; font-weight:700; letter-spacing:-.01em; color:var(--ink); }
+  .tag { margin:var(--space-10) 0 0 4px; font-size:14px; line-height:20px; color:var(--text); }
+</style>
+</head>
+<body>
+<div class="cover">
+<div class="art" aria-hidden="true">
+<svg viewBox="0 0 480 320" width="480" height="320">
+<!--
+  blocks      primary 312x232 field bleeding off the right edge (the site's blue, the largest) · navy 144x312 slab bled off the top (the info cards) · ink 144x64 bar (headings, dark button) — about 40% of 960x320
+  arrangement one tall navy slab beside a blue field, ink capping the field's column above; bottoms on one line space-25 above the edge, space-15 gutters
+  pattern     the site's own motif: the features row's icon circles joined by 3px dotted connectors, drawn in surface over the primary field
+  scales      gutters space-15; circle pitch 96 (100px icon circles scaled); corners radius-5; circles radius-round; dots 3px as on the site
+-->
+<rect class="navy blk" x="16" y="-16" width="144" height="311" rx="5"/>
+<rect class="ink blk" x="175" y="-16" width="144" height="64" rx="5"/>
+<rect class="primary blk" x="175" y="63" width="320" height="232" rx="5"/>
+<line class="dots" x1="284" y1="180" x2="308" y2="180"/>
+<line class="dots" x1="380" y1="180" x2="404" y2="180"/>
+<circle class="ring" cx="248" cy="180" r="32"/>
+<circle class="ring" cx="344" cy="180" r="32"/>
+<circle class="ring" cx="440" cy="180" r="32"/>
+</svg>
+</div>
+<div class="words">
+<h1 class="name">Teebat<br>Karbala</h1>
+<p class="tag">Iraq's Gateway to the World.</p>
+</div>
+</div>
+</body>
+</html>
